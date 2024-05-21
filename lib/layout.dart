@@ -41,7 +41,7 @@ class _LayoutAppState extends State<LayoutApp> {
   }
   @override
   Widget build(BuildContext context) {
-    // List<Widget> screens = [];
+     List<Widget> screens = [];
     ChatUser? me =  Provider.of<ProviderApp>(context).me;
     return Scaffold(
       body :me==null ? Center(child: CircularProgressIndicator(),):

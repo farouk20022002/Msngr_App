@@ -77,7 +77,7 @@ class FireData{
        .collection('messages')
        .doc(msgId)
        .set(message.toJson())
-       .then((value) => sendNotification(chatUser: chatUser,context:context ,msg:type ?? msg ));;
+       .then((value) => sendNotification(chatUser: chatUser,context:context ,msg:type ?? msg ));
    firestore.collection('rooms').doc(roomId).update(
        {
       'last_message': type ?? msg,
@@ -201,7 +201,7 @@ class FireData{
    final header ={
      'Content-Type': 'application/json',
      'Authorization' :
-     'key = eHKThi5SRNmuy8ohaLg_mA:APA91bEkAfOCpUdayryGeL9A8dx6iJg1xvn6QXbn0TSZdwMhkN6ahxn_yVje9ApqKdIC8RGC05YAeVhCqHNH3FxdfEBPSHTRfkhnzTGGaIUGhrYOJZ6YRftFrP4Mmi5uQTfDb7LQ9Y4x'
+     'key = AAAACXdbyAE:APA91bGawlUWSaMUr6JoRITjgeX25g2xBho_XZRByLL_wjLiUms61vcpx5hN2jFQIEknlyX7orchlR2IKMOzca7AirglAbnKEQ49_C3yNSPhJpRElUjbHvSa2LrmJq5bu2N7lkRzJkD_'
    };
    final body = {
      'to' : chatUser.pushToken,

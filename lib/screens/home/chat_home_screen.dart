@@ -36,7 +36,9 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
                         style: Theme.of(context).textTheme.bodyLarge,),
                       const Spacer(),
                       IconButton.filled(
-                          onPressed: () {},
+                          onPressed: () {
+
+                          },
                           icon: const Icon(Iconsax.scan_barcode)
                       )
                     ],

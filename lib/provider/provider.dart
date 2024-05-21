@@ -54,4 +54,7 @@ themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
 mainColor = sharedPreferences.getInt('color') ?? 0xff405085;
 notifyListeners();
 }
+
+
+
 }

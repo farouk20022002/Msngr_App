@@ -1,4 +1,5 @@
 import 'package:chat_material3/firebase/fire_auth.dart';
+import 'package:chat_material3/layout.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_material3/utils/colors.dart';
@@ -49,11 +50,14 @@ class _SetupProfileState extends State<SetupProfile> {
               ElevatedButton(
                   onPressed: () async {
                     if(nameCon.text.isNotEmpty) {
-                      await FirebaseAuth
+                       await FirebaseAuth
                           .instance
                           .currentUser!
                           .updateDisplayName(nameCon.text)
-                          .then((value) { FireAuth.createUser();});
+                          .then((value) {
+                            FireAuth.createUser();
+
+                          });
 
                     }
                   },
